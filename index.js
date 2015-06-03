@@ -22,7 +22,7 @@ DomjsSiteTree.prototype = Object.create(SiteTree.prototype, {
 	constructor: d(DomjsSiteTree),
 	resolveTemplate: d(function (tpl, context) {
 		var df;
-		if (tpl === 'string') {
+		if (typeof tpl === 'string') {
 			df = this.document.createDocumentFragment();
 			df.appendChild(this.document.createTextNode(tpl));
 			return df;
