@@ -5,7 +5,7 @@ var toArray  = require('es5-ext/array/to-array')
 
 module.exports = function (T, a) {
 	var domjs = new Domjs(document), tree = new T(domjs), ns = domjs.ns
-	  , header, content, foo, bar, context = {}, partialContent = {}, conf;
+	  , header, content, foo, bar, context = {}, partialContent = {};
 
 	var rootPage = { _name: 'root', body: function () {
 		header = ns.div({ id: 'header' }, 'Header');
@@ -56,40 +56,4 @@ module.exports = function (T, a) {
 	a(partialContent.className, 'active', "Classname");
 	a(partialContent.textContent, 'prepended 1 prepended 2 melon appended 1 appended 2',
 		"Append/Prepend");
-
-	a.h1("Ensure view");
-	a.throws(function () { T.ensureView(undefined, tree); }, TypeError);
-	a.throws(function () { T.ensureView(null, tree); }, TypeError);
-	a.throws(function () { T.ensureView('', tree); }, TypeError);
-	conf = {};
-	a(T.ensureView(conf, tree), conf);
-	conf._foo = 'bar';
-	a(T.ensureView(conf, tree), conf);
-	conf.bar = 'foo';
-	a.throws(function () { T.ensureView(conf, tree); }, TypeError);
-	delete conf.bar;
-	conf['foo bar'] = function () {};
-	a.throws(function () { T.ensureView(conf, tree); }, TypeError);
-	delete conf['foo bar'];
-	conf.bar = function () {};
-	a(T.ensureView(conf, tree), conf);
-	conf.elo = { class: 'raz' };
-	a.throws(function () { T.ensureView(conf, tree); }, TypeError);
-	conf.elo.class = {};
-	a(T.ensureView(conf, tree), conf);
-	conf.elo.content = '';
-	a.throws(function () { T.ensureView(conf, tree); }, TypeError);
-	conf.elo.content = {};
-	a.throws(function () { T.ensureView(conf, tree); }, TypeError);
-	conf.elo.content = function () {};
-	a(T.ensureView(conf, tree), conf);
-	conf.elo.prepend = function () {};
-	a.throws(function () { T.ensureView(conf, tree); }, TypeError);
-	delete conf.elo.prepend;
-	conf.elo.append = function () {};
-	a.throws(function () { T.ensureView(conf, tree); }, TypeError);
-	delete conf.elo.content;
-	a(T.ensureView(conf, tree), conf);
-	conf.elo.prepend = function () {};
-	a(T.ensureView(conf, tree), conf);
 };
