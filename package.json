@@ -18,7 +18,7 @@
     "es5-ext": "^0.10.7",
     "d": "^0.1.1",
     "domjs": "git://github.com/medikoo/domjs.git#960f5b9ae",
-    "site-tree": "git://github.com/medikoo/site-tree.git#368e07e956c"
+    "site-tree": "git://github.com/medikoo/site-tree.git#cd8635d"
   },
   "devDependencies": {
     "class-list": "^0.1.1",
