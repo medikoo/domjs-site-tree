@@ -88,6 +88,12 @@ var siteTree = new DomjsSiteTree(domjs);
 
 On initialization [Domjs](https://github.com/medikoo/domjs#domjs) instance needs to be provided.
 
+#### Templates format
+
+`DomjsSiteTree` templates cane be provied in form of:
+- __functions__, where content should be built using domjs element constructors (_DocumentFragment_ will automatically be resolved via domjs)
+- __strings__, which will be treated as plain text (not HTML) content for addressed elements.
+
 For detailed documentation of configuration of SiteTree, please refer to [SiteTree documentation](https://github.com/medikoo/site-tree#configuration-of-view-nodes)
 
 ## Tests [![Build Status](https://travis-ci.org/medikoo/domjs-site-tree.svg)](https://travis-ci.org/medikoo/domjs-site-tree)
