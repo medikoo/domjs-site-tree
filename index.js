@@ -20,7 +20,7 @@ var DomjsSiteTree = module.exports = defineProperties(setPrototypeOf(function (d
 
 DomjsSiteTree.prototype = Object.create(SiteTree.prototype, {
 	constructor: d(DomjsSiteTree),
-	resolveTemplate: d(function (tpl, context) {
+	_resolveTemplate: d(function (tpl, context) {
 		var df;
 		if (typeof tpl === 'string') {
 			df = this.document.createDocumentFragment();
