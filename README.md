@@ -90,7 +90,7 @@ On initialization [Domjs](https://github.com/medikoo/domjs#domjs) instance needs
 
 #### Templates format
 
-`DomjsSiteTree` templates cane be provied in form of:
+`DomjsSiteTree` templates can be provided in a form of:
 - __functions__, where content should be built using domjs element constructors (_DocumentFragment_ will automatically be resolved via domjs)
 - __strings__, which will be treated as plain text (not HTML) content for addressed elements.
 
