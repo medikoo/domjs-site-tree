@@ -16,17 +16,16 @@
     "url": "git://github.com/medikoo/domjs-site-tree.git"
   },
   "dependencies": {
-    "es5-ext": "^0.10.7",
-    "d": "^0.1.1",
-    "domjs": "git://github.com/medikoo/domjs.git#f783e56c9de6833d17b37adb1e33273d",
-    "site-tree": "1"
+    "es5-ext": "^0.10.14",
+    "d": "1",
+    "domjs": "^0.3.1",
+    "site-tree": "^1.2"
   },
   "devDependencies": {
-    "class-list": "^0.1.1",
-    "jsdom": "^3.1.2",
-    "tad": "^0.2.3",
+    "jsdom": "^9.12",
+    "tad": "^0.2.7",
     "xlint": "^0.2.2",
-    "xlint-jslint-medikoo": "^0.1.3"
+    "xlint-jslint-medikoo": "^0.1.4"
   },
   "scripts": {
     "lint": "node node_modules/xlint/bin/xlint --linter=node_modules/xlint-jslint-medikoo/index.js --no-cache --no-stream",
